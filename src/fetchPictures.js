@@ -9,8 +9,8 @@ export default class PicturesApiServise{
         const r = await fetch(url);
         const data = await r.json();
         this.incrementPage();
-        data.hits;
-        data.totalHits;
+        // data.hits;
+        // data.totalHits;
         return data;
        
     }

@@ -42,8 +42,8 @@ function clearHitsContainer() {
 function feachHits(){
     // loadMoreBtn.disable();
     picturesApiServise.fetchArticles().then(data => { 
-        hits = data.hits;
-        totalHits = data.totalHits;
+        const hits = data.hits;
+        const totalHits = data.totalHits;
         if (totalHits === 0) {
              loadMoreBtn.hide();
             return Notify.failure("Sorry, there are no images matching your search query. Please try again.")
