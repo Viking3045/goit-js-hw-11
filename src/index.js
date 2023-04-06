@@ -4,8 +4,7 @@ import PicturesApiServise from './fetchPictures';
 import LoadMoreBtn from './loadMoreBtn';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'notiflix/dist/notiflix-3.2.6.min.css';
-// import axios from 'axios';
-import SimpleLightbox from "simplelightbox";
+// import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 
