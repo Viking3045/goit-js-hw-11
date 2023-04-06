@@ -5,8 +5,8 @@ import LoadMoreBtn from './loadMoreBtn';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'notiflix/dist/notiflix-3.2.6.min.css';
 // import axios from 'axios';
-// import SimpleLightbox from "simplelightbox";
-// import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 const refs = {
@@ -66,11 +66,11 @@ function feachHits(){
 }
  
 
-// let lightbox = new SimpleLightbox('.photo-card a', {
-//     captionsData: 'alt',
-//     captionDelay: 250,
-//     enableKeyboard: "Escape",
-// });
+let lightbox = new SimpleLightbox('.photo-card a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+    enableKeyboard: "Escape",
+});
 
 
-//   lightbox.refresh();
+  lightbox.refresh();
