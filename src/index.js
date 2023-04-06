@@ -36,6 +36,10 @@ function onSearch(event) {
     loadMoreBtn.show()
     picturesApiServise.resetPage();
     feachHits()
+   picturesApiServise.fetchArticles().then(data => { 
+        const totalHits = data.totalHits;
+        return Notify.info(`Hooray! We found ${totalHits} images.`)     
+    })
 }
 
 
@@ -60,11 +64,10 @@ function feachHits(){
              loadMoreBtn.hide();
            return Notify.info("We're sorry, but you've reached the end of search results.")
         };
-               
     })
    
 }
- 
+
 
 // let lightbox = new SimpleLightbox('.photo-card a', {
 //     captionsData: 'alt',
