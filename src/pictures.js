@@ -3,14 +3,22 @@ const renderPictures = (hits) => {
     const picturesContainer = document.querySelector(`.gallery`);
     // picturesContainer.innerHTML = '';
     const pictures = hits.map(hit => {
-        const photoCard = document.createElement('div');
-        photoCard.classList.add('photo-card');
+      const photoCard = document.createElement('div');
+      photoCard.classList.add('photo-card');
+
+      const link = document.createElement('a');
+      link.classList.add('gallery__item')
+      link.href = `${hit.largeImageURL}`;
+      photoCard.append(link);
 
         const img = document.createElement('img');
         img.classList.add('pictures-img');
         img.src = `${hit.webformatURL}`;
-      img.alt = hit.tags;
-        photoCard.append(img);
+        img.alt = hit.tags;
+        link.append(img)
+   
+      
+  
         
         const info = document.createElement('div');
         info.classList.add('info');

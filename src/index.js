@@ -4,7 +4,9 @@ import PicturesApiServise from './fetchPictures';
 import LoadMoreBtn from './loadMoreBtn';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'notiflix/dist/notiflix-3.2.6.min.css';
-import axios from 'axios';
+// import axios from 'axios';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 const refs = {
@@ -52,6 +54,7 @@ function feachHits(){
         }
       
         renderPictures(hits);
+    
         // loadMoreBtn.enable();
         if (hits.length === 0) {
              loadMoreBtn.hide();
@@ -63,4 +66,11 @@ function feachHits(){
 }
  
 
+let lightbox = new SimpleLightbox('.photo-card a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+    enableKeyboard: "Escape",
+});
 
+
+  lightbox.refresh();

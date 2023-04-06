@@ -8,7 +8,7 @@ export default class PicturesApiServise{
     async fetchArticles(searchQuery) {
         const url = `https://pixabay.com/api/?key=34850803-a728da3cec220ddd15679bd1c&q=${this.searchQuery}&image_type=photo$orientation&safesearch&page=${this.page}&per_page=40`;
         const r = await axios.get(url);
-        const data = await r.json();
+         const data = await r.data;
         this.incrementPage();
         // data.hits;
         // data.totalHits;
