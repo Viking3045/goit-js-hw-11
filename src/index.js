@@ -4,6 +4,8 @@ import PicturesApiServise from './fetchPictures';
 import LoadMoreBtn from './loadMoreBtn';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'notiflix/dist/notiflix-3.2.6.min.css';
+import axios from 'axios';
+
 
 const refs = {
     searchForm: document.querySelector('.search-form'),
